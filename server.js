@@ -10,9 +10,12 @@ const { authticate } = require("./middleware/authenticate");
 const cors=require("cors");
 app.use(express.json());
 app.use(cors({
-      origin:"*"
+      origin:["http://localhost:3000"]
 }))
 //login signup 
+app.get("/",(req,res)=>{
+      res.send("welcome");
+})
 app.post("/signup",async(req,res)=>{
 const {email,password}=req.body;
 try{
