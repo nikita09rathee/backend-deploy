@@ -10,7 +10,7 @@ const { authticate } = require("./middleware/authenticate");
 const cors=require("cors");
 app.use(express.json());
 app.use(cors({
-      origin:["http://localhost:3000","https://roaring-dango-b27e1c.netlify.app/"]
+      origin:["http://localhost:3000","https://musical-custard-ce4604.netlify.app/"]
 }))
 //login signup 
 app.get("/",(req,res)=>{
